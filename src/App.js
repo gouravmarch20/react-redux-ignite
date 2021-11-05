@@ -1,16 +1,20 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { loadGames } from './actions/gamesAction'
 import dotenv from 'dotenv'
+//Components and pages
+import Home from './pages/Home'
+import Nav from './components/Nav'
+//Styles
+import GlobalStyles from './components/GlobalStyles'
+//Router
+import { Route } from 'react-router-dom'
 dotenv.config()
 const App = () => {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(loadGames)
-  }, [])
   return (
     <div>
-      <h1>ignite</h1>
+      {/* <Route path={['/game/:id', '/']}> */}
+        <Home />
+        <h3>kk kio</h3>
+      {/* </Route> */}
     </div>
   )
 }

@@ -13,6 +13,7 @@ const initialState = {
           game: action.payload.game,
           screen: action.payload.screen,
           isLoading: false,
+          
         };
   
       case "LOADING_DETAIL":

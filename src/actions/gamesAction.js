@@ -11,7 +11,6 @@ import {
 export const loadGames = () => async dispatch => {
   //FETCH AXIOS
   const popularData = await axios.get(popularGamesURL())
-  console.log(popularData)
   const newGamesData = await axios.get(newGamesURL())
   const upcomingData = await axios.get(upcomingGamesURL())
   dispatch({

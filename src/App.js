@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import dotenv from 'dotenv'
+import React from 'react'
 //Components and pages
 import Home from './pages/Home'
 import Nav from './components/Nav'
@@ -7,14 +6,15 @@ import Nav from './components/Nav'
 import GlobalStyles from './components/GlobalStyles'
 //Router
 import { Route } from 'react-router-dom'
-dotenv.config()
-const App = () => {
+
+function App () {
   return (
-    <div>
-      {/* <Route path={['/game/:id', '/']}> */}
+    <div className='App'>
+      <GlobalStyles />
+      <Nav />
+      <Route path={['/game/:id', '/']}>
         <Home />
-        <h3>kk kio</h3>
-      {/* </Route> */}
+      </Route>
     </div>
   )
 }

@@ -62,7 +62,6 @@ const GameDetail = ({ pathId }) => {
 
   //Data
   const { screen, game, isLoading } = useSelector(state => state.detail)
-  console.log(game)
   return (
     <>
       {!isLoading && (
@@ -77,7 +76,6 @@ const GameDetail = ({ pathId }) => {
               <Info>
                 <h3>Platforms</h3>
                 <Platforms>
-                  {/*
                   {game.platforms.map(data => (
                     <img
                       alt={data.platform.name}
@@ -85,7 +83,6 @@ const GameDetail = ({ pathId }) => {
                       src={getPlatform(data.platform.name)}
                     ></img>
                   ))}
-               */}
                 </Platforms>
               </Info>
             </Stats>
